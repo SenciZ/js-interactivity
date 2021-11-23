@@ -21,15 +21,25 @@ document.querySelector('form').addEventListener('submit', addMovie)
 
 const deleteMovie = (e)=>{
     e.target.parentNode.remove()
-    message.textContent = "Movie Deleted!"
+    message.textContent = `${e.target.parentNode.firstChild.textContent} Deleted`
+    console.log(e.target.parentNode)
+    revealMessage();
 }
 
 const crossOffMovie = (e)=>{
     e.target.classList.toggle('checked');
     if(e.target.classList.contains('checked')){
-        message.textContent="Movie Watched!"
+        message.textContent=`${e.target.textContent} Watched!`
     } else {
-        message.textContent="Movie Added Back!"
+        message.textContent=`${e.target.textContent} Added Back!`
 
     }
+    revealMessage();
+}
+
+const revealMessage = ()=>{
+    message.classList.remove('hide')
+    setTimeout((e)=>{
+        message.classList.add('hide')
+    }, [1000])
 }
