@@ -32,7 +32,6 @@ const crossOffMovie = (e)=>{
         message.textContent=`${e.target.textContent} Watched!`
     } else {
         message.textContent=`${e.target.textContent} Added Back!`
-
     }
     revealMessage();
 }

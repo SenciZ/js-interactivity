@@ -55,9 +55,22 @@ button {
     font-weight: bold;
     background: rgb(150, 0, 133);
     color: white;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.editBtn {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+    background: rgb(150, 0, 133);
+    color: white;
     margin-left: 20px;
     vertical-align: middle;
 }
+
+
 
 button:hover{
     background: rgb(210, 38, 190);
