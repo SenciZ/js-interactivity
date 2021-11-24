@@ -47,7 +47,9 @@ const checkOffMovie = (e)=>{
 }
 
 const editMovie = (e)=>{
-    e.target.parentNode.children[0].textContent = prompt("Title of Movie")
+    const editForm = document.getElementById("editForm")
+    editForm.classList.remove("editDivHidden")
+    editForm.classList.add("editDiv")
 }
 
 
